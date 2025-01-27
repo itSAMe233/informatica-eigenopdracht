@@ -19,6 +19,9 @@ pygame.init()
 
 BLACK = [0, 0, 0]
 WHITE = [255, 255, 255]
+GGRAY = [120, 163, 119]
+BGREY = [119, 136, 163]
+RGReY = [163, 119, 119]
 RED = [255, 0, 0]
 LNC = [207, 101, 1]
 NC = [178, 88, 4]
@@ -36,10 +39,13 @@ pygame.display.set_caption("imke's game")
 note_list = []
 
 # Loop 50 times and add a snow flake in a random x,y position
-for i in range(5):
-    x = random.randrange(1, 200)
-    y = random.randrange(1, 200)
-    note_list.append([x, y])
+for i in range(75):
+    x = random.randrange(0, 400)
+    y = random.randrange(0, 500)
+    pygame.draw.square(screen, GGREY, [x, y], 4)
+    pygame.draw.square(screen, BGREY, [x, y], 4)
+    pygame.draw.square(screen, RGREY, [x, y], 4)
+    #note_list.append([x, y])
 
 clock = pygame.time.Clock()
 
